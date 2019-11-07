@@ -6,12 +6,6 @@ speed = prompt("What speed would you like to read?")
 console.log("user input speed", speed)
 
 
-// if (person != null) {
-//     document.getElementById("demo").innerHTML =
-//     "Hello " + person + "! How are you today?";
-//   }
-
-
 const Highlight = (collection, n, speed) => {
   
     if (n === collection.length-1) return
@@ -44,7 +38,7 @@ const Highlight = (collection, n, speed) => {
             temp = deepChildArray[j];
             childArray[j] = temp;
             child.innerHTML = childArray.join(" ");
-            Highlight(collection, n+1)
+            Highlight(collection, n+1, speed)
         }
 
     }, Number(speed))
@@ -52,7 +46,7 @@ const Highlight = (collection, n, speed) => {
 
 }
 
-Highlight(document.getElementsByTagName('p'), 0)
+Highlight(document.getElementsByTagName('p'), 0, speed)
 
 
 
