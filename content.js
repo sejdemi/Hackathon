@@ -1,9 +1,18 @@
-alert('THIS IS WORKING')
+// alert('THIS IS WORKING')
 
 
 let speed = 0
 speed = prompt("What speed would you like to read?")
 console.log("user input speed", speed)
+
+let color = "yellow"
+
+color = prompt("What is your favorite color?")
+
+let fontsize = "50px";
+
+fontsize = prompt("How large would you like your text?")
+
 
 
 const Highlight = (collection, n, speed) => {
@@ -22,7 +31,7 @@ const Highlight = (collection, n, speed) => {
     
     let timerID = setInterval(() => {
         if (i >= childArray.length) return
-        childArray[i] = `<mark><strong>${childArray[i]}</strong></mark>`; 
+        childArray[i] = `<mark style="background-color: ${color}; font-size: ${fontsize}px;"><strong>${childArray[i]}</strong></mark>`; 
         child.innerHTML = childArray.join(" ");
     
         i+=1
