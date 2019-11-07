@@ -2,6 +2,10 @@
     "manifest_version" : 2,
     "name": "Filter Extension",
     "version": "0.1",
+
+    "icons": {
+        "16": "eye.png"
+    },
     
     "content_scripts" : [
         {
