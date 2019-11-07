@@ -1,10 +1,10 @@
 alert('THIS IS NOT WORKING')
 console.log('worskdsfsd')
-console.log('fourth time')
+console.log('fifff time')
 // const intro = document.querySelector('#firstHeading')
 // let intro = document.getElementById('firstHeading');
 let body = document.body
-body.innerHTML = body.innerHTML.replace(/a/g, '<mark>a</mark>')
+// body.innerHTML = body.innerHTML.replace(/a/g, '<mark>a</mark>')
 // intro.textContent = 'YerrRESERESRRRRR'
 // intro.innerHTML= '<mark>i wokr?</mark>'
 // intro.setAttribute('style', 'background-color: yellow')
@@ -17,21 +17,69 @@ body.innerHTML = body.innerHTML.replace(/a/g, '<mark>a</mark>')
 // document.body.innerHTML = document.body.innerHTML.replace(/Highlighting/g, 'HELLOOOOOOOOO')
 
 
-// let child = document.body.getElementsByTagName('p')
+let child = document.getElementsByTagName('p')[0]
 // console.log(child)
-// let childArray = child.innerText.split(" ");
+let childArray = child.innerText.split(" ");
 
-// let temp
+let shallowChildArray = JSON.parse(JSON.stringify(childArray))
 
-// for (let i = 0; i < childArray.length; i++) { 
-// temp = childArray[i];
-// childArray[i] = `<mark>${childArray[i]}</mark>`; 
-// child.innerHTML = childArray.join(" "); 
+let temp
+let i = 1
+let j = 0
+let pos 
+
+
+
+setInterval(() => {
+    // i+=1
+
+    if (i >= childArray.length -1) return
+    // temp = childArray[i];
+    childArray[i] = `<mark>${childArray[i]}</mark>`; 
+    child.innerHTML = childArray.join(" ");
+
+
+    i+=1
+    
+    temp = shallowChildArray[j];
+    childArray[j] = temp;
+    child.innerHTML = childArray.join(" ");
+    j += 1
+// i+=1
+
+
+// setInterval(() => {
+//     temp = shallowChildArray[j];
+//     shallowChildArray[j] = `<mark>${shallowChildArray[j]}</mark>`; 
+// child.innerHTML = shallowChildArray.join(" "); 
+// shallowChildArray[j] = temp;
+// child.innerHTML = shallowChildArray.join(" ");
+// j++
+// // console.log("temp", temp)
+// }, (5000));
 // childArray[i] = temp;
 // child.innerHTML = childArray.join(" ");
-// }
+// console.log("temp", temp)
+}, 1000)
 
-// let child = document.body.getElementsByTagName('p')[0]
+// setInterval(() => {
+//     temp = shallowChildArray[i];
+//     shallowChildArray[i] = `<mark>${shallowChildArray[i]}</mark>`; 
+// child.innerHTML = shallowChildArray.join(" "); 
+// shallowChildArray[i] = temp;
+// child.innerHTML = shallowChildArray.join(" ");
+// // console.log("temp", temp)
+// }, 5000)
+
+
+    
+
+
+
+
+
+
+// let child = document.getElementsByTagName('p')[0]
 // let childArray = child.innerText.split(" ");
 // let temp
 
