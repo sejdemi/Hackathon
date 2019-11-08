@@ -6,7 +6,7 @@
   <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>POC Extension</title>
+  <title>chromeEYE</title>
   <meta name="description" content="POC Extension">
   <meta name="author" content="Yann Bohbot">
   <!-- <link rel="stylesheet" href="css/popup.css"> -->
@@ -15,13 +15,27 @@
   <script src="js/popup.js"></script>
 </head>
 <body>
+  
   <h2>Toggle</h2>
   <ul class="tg-list">
     <li class="tg-list-item">
-      <h4>Flat</h4>
-      <input type="checkbox" id="cb4" class="tgl tgl-flat" value = "Disable" />
-      <label class="tgl-btn" for="cb4"></label>
-    </li>
+      <h4>Speed</h4>
+      <form class="range-field">
+          <input id="speed" type="range" min="0" max="100" />
+        </form>
+      </li>
+      <li class="tg-list-item">
+      <h4>Font-size</h4>
+        <form class="range-field">
+            <input id="fontSize" type="range" min="0" max="100" />
+          </form>
+        </li>
+        <li>
+            <div id="flex">
+              <h4>Color
+                <input type="color" id="colorPicker" name="head" value="#e66465"></h4>
+            </div>
+          </li>
   </ul>
 </body>
 </html>
