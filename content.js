@@ -1,13 +1,10 @@
-// alert('THIS IS WORKING')
-
-
 let speed = 0
 speed = prompt("What speed would you like to read?")
 console.log("user input speed", speed)
 
 let color = "yellow"
 
-color = prompt("What is your favorite color?")
+color = prompt("What color would you like to highlight?")
 
 let fontsize = "50px";
 

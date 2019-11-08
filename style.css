@@ -3,10 +3,15 @@ mark {
     background-color: blue;
 }
 
-/* h3 {
-    background-color: blue;
-    font-size: 50px;
+#flex {
+    display: flex;
+    width: 0px;
+    justify-content: space-between;
 }
- */
+
+#colorPick {
+    margin-left: 20px;
+    padding-left : 20px;
+}
 
 
